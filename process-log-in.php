@@ -25,6 +25,13 @@ if($count==1){
 while($row = mysql_fetch_assoc($result))
 {
    $name = $row["name"];
+   $level= $row["level"];
+   //
+   if ($level == 0){
+  header("location:access-denied.php");
+    exit;
+   }
+  
 } 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 // Start the session
@@ -34,7 +41,7 @@ $_SESSION["email"] = $email;
 $_SESSION["password"] = $password;
 $_SESSION["name"] = $name;
 //echo "Session variables are set.";
-header("location:success-log-in.php");
+header("location:admin-welcom.php");
 }
 else {
 echo "Wrong Username or Password";

@@ -6,7 +6,7 @@ if( isset( $_SESSION['email'] ) )
 	 exit;
   }
    ?>
-<?php include 'main.php';?>
+<?php include 'admin-main.php';?>
 <!DOCTYPE HTML>
 <html>
 <head>
